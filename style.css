@@ -1,22 +1,79 @@
-/* Technical Icon Styling */
-.tech-icon-container {
-    color: #0f3460;
-    margin-bottom: 10px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents scrollbars from animation */
+    background-color: #0a0a0c; /* Dark theme for contrast */
 }
 
-/* Console-like Bio Styling */
-.bio-tech {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    color: #a0a0c0;
-    line-height: 1.6;
-    background-color: #10101a;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #0f3460;
+/* --- Live Background Animation --- */
+.circuit-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places it behind the card */
+    background-color: #0a0a0c;
+    background-image: 
+        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: backgroundMove 10s linear infinite;
 }
 
-/* New Project Button Color */
-.projects {
-    background-color: #3e0c57;
+@keyframes backgroundMove {
+    from { background-position: 0 0; }
+    to { background-position: 50px 50px; }
 }
+
+/* --- Profile Card Styles --- */
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(5px); /* Frosty effect */
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00d2ff; /* Tech blue border */
+}
+
+h1 { margin: 10px 0 5px; color: #333; }
+p { margin: 0 0 20px; color: #555; }
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-btn {
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.link-btn:hover { transform: scale(1.05); }
+
+/* Platform Colors */
+.instagram { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+.linkedin { background-color: #0077b5; }
+.twitter { background-color: #1DA1F2; }
