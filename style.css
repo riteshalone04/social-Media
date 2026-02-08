@@ -1,6 +1,10 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    /* Changed to a dark slate background */
+    background-color: #1a1a2e; 
+    /* Added a subtle circuit-like pattern image (optional) */
+    background-image: radial-gradient(#2a2a4a 1px, transparent 1px);
+    background-size: 30px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,61 +13,27 @@ body {
 }
 
 .profile-card {
-    background-color: white;
+    /* Darker card background */
+    background-color: #16213e; 
+    /* Subtle blue border to look like a PCB trace */
+    border: 2px solid #0f3460; 
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     text-align: center;
     width: 350px;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 h1 {
     margin: 10px 0 5px;
     font-size: 24px;
-    color: #333;
+    /* Light text for dark background */
+    color: #e94560; /* Accent color */
 }
 
 p {
     margin: 0 0 20px;
-    color: #777;
+    /* Lighter grey for readability */
+    color: #a0a0c0; 
     font-size: 16px;
 }
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.link-btn {
-    text-decoration: none;
-    color: white;
-    padding: 12px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.link-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Platform Colors */
-.instagram { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
-.linkedin { background-color: #0077b5; }
-.twitter { background-color: #1DA1F2; }
-.github { background-color: #333; }
