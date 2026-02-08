@@ -1,39 +1,22 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Changed to a dark slate background */
-    background-color: #1a1a2e; 
-    /* Added a subtle circuit-like pattern image (optional) */
-    background-image: radial-gradient(#2a2a4a 1px, transparent 1px);
-    background-size: 30px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+/* Technical Icon Styling */
+.tech-icon-container {
+    color: #0f3460;
+    margin-bottom: 10px;
 }
 
-.profile-card {
-    /* Darker card background */
-    background-color: #16213e; 
-    /* Subtle blue border to look like a PCB trace */
-    border: 2px solid #0f3460; 
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    text-align: center;
-    width: 350px;
+/* Console-like Bio Styling */
+.bio-tech {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #a0a0c0;
+    line-height: 1.6;
+    background-color: #10101a;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0f3460;
 }
 
-h1 {
-    margin: 10px 0 5px;
-    font-size: 24px;
-    /* Light text for dark background */
-    color: #e94560; /* Accent color */
-}
-
-p {
-    margin: 0 0 20px;
-    /* Lighter grey for readability */
-    color: #a0a0c0; 
-    font-size: 16px;
+/* New Project Button Color */
+.projects {
+    background-color: #3e0c57;
 }
