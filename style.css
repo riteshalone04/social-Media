@@ -86,3 +86,8 @@ h1 {
 .twitter { background: #1DA1F2; }
 .github { background: #333; }
 .facebook { background: #1877F2; }
+/* ... existing CSS ... */
+
+.github { background: #333; }
+/* ADDED: Facebook Button Styling */
+.facebook { background: #1877F2; }
