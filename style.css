@@ -1,44 +1,42 @@
+/* Basic Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    height: 100vh;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Prevents scrollbars from animation */
-    background-color: #0a0a0c; /* Dark theme for contrast */
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-/* --- Live Background Animation --- */
+/* Background - Enhanced for "Circuit" look */
 .circuit-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Places it behind the card */
-    background-color: #0a0a0c;
+    background-color: #0a0e17;
+    /* Creating a subtle grid/circuit pattern */
     background-image: 
-        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(#1a202c 1px, transparent 1px),
+        linear-gradient(90deg, #1a202c 1px, transparent 1px);
     background-size: 50px 50px;
-    animation: backgroundMove 10s linear infinite;
+    z-index: -1;
 }
 
-@keyframes backgroundMove {
-    from { background-position: 0 0; }
-    to { background-position: 50px 50px; }
-}
-
-/* --- Profile Card Styles --- */
+/* Profile Card Styling */
 .profile-card {
-    background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
-    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 40px;
     text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     width: 350px;
-    backdrop-filter: blur(5px); /* Frosty effect */
+    color: white;
 }
 
 .profile-pic {
@@ -46,12 +44,23 @@ body {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #00d2ff; /* Tech blue border */
+    border: 4px solid #fff;
+    margin-bottom: 20px;
 }
 
-h1 { margin: 10px 0 5px; color: #333; }
-p { margin: 0 0 20px; color: #555; }
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
 
+.subtitle {
+    color: #a0aec0;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Social Links Buttons */
 .social-links {
     display: flex;
     flex-direction: column;
@@ -63,17 +72,21 @@ p { margin: 0 0 20px; color: #555; }
     color: white;
     padding: 12px;
     border-radius: 10px;
-    font-weight: bold;
-    transition: transform 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: bold;
 }
 
-.link-btn:hover { transform: scale(1.05); }
+.link-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
-/* Platform Colors */
-.instagram { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
-.linkedin { background-color: #0077b5; }
-.twitter { background-color: #1DA1F2; }
+/* Button Colors */
+.instagram { background: #E1306C; }
+.linkedin { background: #0077B5; }
+.twitter { background: #1DA1F2; }
+.github { background: #333; }
